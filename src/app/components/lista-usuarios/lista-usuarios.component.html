@@ -1,0 +1,19 @@
+<div class="container">
+    <h1>Biblioteca los Jesús</h1>
+    <div class="users">
+        <label for="">Usuarios</label>
+        <select class="form-control" #usuario>
+            <option *ngFor="let item of usuarios">
+                {{ item.id }} - {{ item.nombres }} {{ item.apellidos }}
+            </option>
+        </select>
+        <button class="btn btn-secondary" (click)="onClick(usuario.value)">Consultar</button>
+    </div>
+    <div class="autor">
+        <span>Integrantes</span>
+        <ul>
+            <li>Jesus Ospino Arroyo</li>
+            <li>Jesus Molina Heredia</li>
+        </ul>
+    </div>
+</div>

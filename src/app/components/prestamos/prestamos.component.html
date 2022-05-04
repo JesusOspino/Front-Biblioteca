@@ -1,0 +1,59 @@
+<div class="container">
+    <div class="user">
+        <table class="table table-dark table-hover">
+            <tbody>
+                <tr>
+                    <td>Usuarios: </td>
+                    <td>{{usuario.id}} - {{usuario.nombres}} {{usuario.apellidos}}</td>
+                </tr>
+                <tr>
+                    <td>Telefono:</td>
+                    <td>{{usuario.telefono}}</td>
+                </tr>
+                <tr>
+                    <td>Dirección:</td>
+                    <td>{{usuario.direccion}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-dark table-hover">
+            <tbody>
+                <tr>
+                    <td>Prestamo Id:</td>
+                    <td>{{data.id_P}}</td>
+                </tr>
+                <tr>
+                    <td>Fecha de prestamo:</td>
+                    <td>{{data.fecha}}</td>
+                </tr>
+                <tr>
+                    <td>Fecha de devolución:</td>
+                    <td>{{data.devolucion}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="detalles">
+        <h4>Detalles del Préstamo</h4>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Codigo</th>
+                    <th scope="col">Libro</th>
+                    <th scope="col">Precio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of detalles">
+                    <td>{{item.id}}</td>
+                    <td>{{item.titulo}}</td>
+                    <td>{{item.precio}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="total">
+            <span>Libros prestado: {{detalles.length}}</span>
+            <span>Costo de los libros: ${{total}}</span>
+        </div>
+    </div>
+</div>
